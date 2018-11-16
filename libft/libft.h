@@ -6,7 +6,7 @@
 /*   By: vlhomme <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 08:51:46 by vlhomme           #+#    #+#             */
-/*   Updated: 2018/11/16 15:01:05 by vlhomme          ###   ########.fr       */
+/*   Updated: 2018/11/16 20:44:48 by vlhomme          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,12 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+int					ft_sqrrt(int nb);
+void				ft_show_bit(int nb);
+int					ft_bintodec(int nb);
+void				ft_epur(char *s);
+int					ft_isprime(int nb);
+int					ft_power(int nb, int expo);
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
 int					ft_isalnum(int c);

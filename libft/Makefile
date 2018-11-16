@@ -8,6 +8,12 @@ PA = ./
 
 SOURCES = \
 		$(PA)ft_lstadd.c \
+		$(PA)ft_bintodec.c \
+		$(PA)ft_epur.c \
+		$(PA)ft_isprime.c \
+		$(PA)ft_power.c \
+		$(PA)ft_show_bit.c \
+		$(PA)ft_sqrrt.c \
 		$(PA)ft_lstdel.c \
 		$(PA)ft_lstdelone.c \
 		$(PA)ft_lstiter.c \

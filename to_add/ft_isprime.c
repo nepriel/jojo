@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_show_bit.c                                      :+:      :+:    :+:   */
+/*   ft_isprime.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vlhomme <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/16 20:03:10 by vlhomme           #+#    #+#             */
-/*   Updated: 2018/11/16 20:42:59 by vlhomme          ###   ########.fr       */
+/*   Created: 2018/11/16 20:35:53 by vlhomme           #+#    #+#             */
+/*   Updated: 2018/11/16 20:45:52 by vlhomme          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_show_bit(int nb)
+int	ft_isprime(int nb)
 {
+	int root;
 	int i;
 
-	i = (sizeof(char) * 8) - 1;
-	while (i >= 0)
+	root = ft_sqrrt(nb);
+	if (root >= 2)
 	{
-		if (nb & (1u << i))
-			write(1, "1", 1);
-		else
-			write(1, "0", 1);
-		i--;
+		i = 2;
+		while (i <= root)
+		{
+			if ((nb % i) == 0)
+				return (0);
+			i++;
+		}
+		return (1);
 	}
+	else if (nb == 2 || nb == 3)
+		return (1);
+	else
+		return (0);
 }
