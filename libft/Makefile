@@ -7,6 +7,12 @@ FLAGS = -Wall -Wextra -Werror
 PA = ./
 
 SOURCES = \
+		$(PA)ft_lstadd.c \
+		$(PA)ft_lstdel.c \
+		$(PA)ft_lstdelone.c \
+		$(PA)ft_lstiter.c \
+		$(PA)ft_lstmap.c \
+		$(PA)ft_lstnew.c \
 		$(PA)ft_atoi.c \
 		$(PA)ft_bzero.c \
 		$(PA)ft_isalnum.c \

@@ -6,7 +6,7 @@
 /*   By: vlhomme <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 15:29:02 by vlhomme           #+#    #+#             */
-/*   Updated: 2018/11/15 11:58:42 by vlhomme          ###   ########.fr       */
+/*   Updated: 2018/11/16 17:13:36 by vlhomme          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
 	size_t i;
 
+	if (n == 0)
+		return (1);
 	if (s1 && s2 && n)
 	{
 		i = 0;

@@ -6,7 +6,7 @@
 /*   By: vlhomme <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 12:04:49 by vlhomme           #+#    #+#             */
-/*   Updated: 2018/11/13 13:20:07 by vlhomme          ###   ########.fr       */
+/*   Updated: 2018/11/16 17:03:21 by vlhomme          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i2;
 	int		i;
 
+	if (!s1 || !s2)
+		return (NULL);
 	if (!(s = (char*)malloc(sizeof(*s) * (ft_strlen(s1) + ft_strlen(s2) + 1))))
 		return (NULL);
 	i = 0;

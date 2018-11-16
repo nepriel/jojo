@@ -6,7 +6,7 @@
 /*   By: vlhomme <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 09:29:02 by vlhomme           #+#    #+#             */
-/*   Updated: 2018/11/15 17:23:10 by vlhomme          ###   ########.fr       */
+/*   Updated: 2018/11/16 15:09:55 by vlhomme          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	fidigit(char c)
 	return (0);
 }
 
-int	ft_atoi(const char *str)
+int			ft_atoi(const char *str)
 {
 	int i;
 	int neg;

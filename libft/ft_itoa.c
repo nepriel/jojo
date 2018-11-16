@@ -6,7 +6,7 @@
 /*   By: vlhomme <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 10:49:55 by vlhomme           #+#    #+#             */
-/*   Updated: 2018/11/15 12:42:35 by vlhomme          ###   ########.fr       */
+/*   Updated: 2018/11/16 15:11:18 by vlhomme          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void	fneg(int *n, int *neg)
 	}
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	int		len;
 	int		neg;
