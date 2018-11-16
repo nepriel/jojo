@@ -6,7 +6,7 @@
 /*   By: vlhomme <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 15:40:58 by vlhomme           #+#    #+#             */
-/*   Updated: 2018/11/15 12:35:53 by vlhomme          ###   ########.fr       */
+/*   Updated: 2018/11/16 14:38:38 by vlhomme          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static size_t	i2blank(char const *s)
 	return (i + 1);
 }
 
-char	*ft_strtrim(char const *s)
+char			*ft_strtrim(char const *s)
 {
 	int		i1;
 	size_t	i2;
