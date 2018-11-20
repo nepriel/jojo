@@ -6,7 +6,7 @@
 /*   By: vlhomme <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 20:31:48 by vlhomme           #+#    #+#             */
-/*   Updated: 2018/11/16 20:44:03 by vlhomme          ###   ########.fr       */
+/*   Updated: 2018/11/16 21:10:31 by vlhomme          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_sqrrt(int nb)
 		return (nb);
 	if (nb < 0)
 	{
-		printf("invalid input : negative integrer\n");
+		ft_putstr("invalid input : negative integrer\n");
 		return (0);
 	}
 	else

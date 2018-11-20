@@ -6,7 +6,7 @@
 /*   By: vlhomme <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 08:51:46 by vlhomme           #+#    #+#             */
-/*   Updated: 2018/11/16 20:44:48 by vlhomme          ###   ########.fr       */
+/*   Updated: 2018/11/16 21:05:36 by vlhomme          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define LIBFT_H
 
 # include <string.h>
-# include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
 
