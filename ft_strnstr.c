@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_power.c                                         :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vlhomme <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/16 19:49:56 by vlhomme           #+#    #+#             */
-/*   Updated: 2018/11/16 19:56:06 by vlhomme          ###   ########.fr       */
+/*   Created: 2018/11/13 16:10:32 by vlhomme           #+#    #+#             */
+/*   Updated: 2018/11/21 16:31:45 by vlhomme          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_power(int nb, int expo)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int i;
-	int res;
+	size_t i;
+	size_t len2;
 
-	res = nb;
-	i = 1;
-	if (expo == 0)
-		return (1);
-	else if (expo == 1)
-		return (nb);
-	else
+	i = 0;
+	if (needle[i] == '\0')
+		return ((char*)haystack);
+	len2 = ft_strlen(needle);
+	while (haystack[i] && len-- >= len2)
 	{
-		while (i < expo)
-		{
-			res = res * nb;
-			i++;
-		}
+		if (haystack[i] == needle[0] \
+				&& ft_memcmp((haystack + i), needle, len2) == 0)
+			return ((char*)haystack + i);
+		i++;
 	}
-	return (res);
+	return (NULL);
 }

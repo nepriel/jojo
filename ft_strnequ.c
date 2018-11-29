@@ -1,39 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vlhomme <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/14 13:38:42 by vlhomme           #+#    #+#             */
-/*   Updated: 2018/11/15 11:31:27 by vlhomme          ###   ########.fr       */
+/*   Created: 2018/11/13 15:29:02 by vlhomme           #+#    #+#             */
+/*   Updated: 2018/11/22 13:33:20 by vlhomme          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t size)
+int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	size_t i;
-	size_t len;
-
-	if (size != 0)
-	{
-		i = 0;
-		while (dst[i] && i < size)
-			i++;
-		len = i;
-		while (src[i - len] && i < size - 1)
-		{
-			dst[i] = src[i - len];
-			i++;
-		}
-		if (len < size)
-			dst[i] = '\0';
-	}
-	if (size == 0)
-	{
-		return (ft_strlen(dst));
-	}
-	return (len + ft_strlen(src));
+	if (s1 == NULL && s2 == NULL)
+		return (1);
+	if (s1 == NULL || s2 == NULL)
+		return (0);
+	if (ft_strncmp(s1, s2, n) == 0)
+		return (1);
+	else
+		return (0);
 }

@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vlhomme <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/13 15:29:02 by vlhomme           #+#    #+#             */
-/*   Updated: 2018/11/16 17:13:36 by vlhomme          ###   ########.fr       */
+/*   Created: 2018/11/08 10:28:10 by vlhomme           #+#    #+#             */
+/*   Updated: 2018/11/21 16:29:46 by vlhomme          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strnequ(char const *s1, char const *s2, size_t n)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t i;
+	size_t	i;
 
-	if (n == 0)
-		return (1);
-	if (s1 && s2 && n)
+	i = 0;
+	while (i < len)
 	{
-		i = 0;
-		while (s2[i] && s1[i] && i < n)
-		{
-			if (s1[i] != s2[i])
-				return (0);
-			i++;
-		}
-		return (1);
+		((char*)b)[i] = (unsigned char)c;
+		i++;
 	}
-	return (0);
+	return (b);
 }

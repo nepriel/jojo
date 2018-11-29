@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrrt.c                                         :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vlhomme <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/16 20:31:48 by vlhomme           #+#    #+#             */
-/*   Updated: 2018/11/16 20:44:03 by vlhomme          ###   ########.fr       */
+/*   Created: 2018/11/14 15:17:27 by vlhomme           #+#    #+#             */
+/*   Updated: 2018/11/22 14:23:43 by vlhomme          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_sqrrt(int nb)
+void	*ft_memalloc(size_t size)
 {
-	int res;
+	void	*s;
 
-	res = 1;
-	if (nb == 0 || nb == 1)
-		return (nb);
-	if (nb < 0)
-	{
-		printf("invalid input : negative integrer\n");
-		return (0);
-	}
-	else
-		while ((res * res) <= nb)
-			res++;
-	return (res - 1);
+	s = malloc(sizeof(s) * size);
+	if (s == NULL)
+		return (NULL);
+	ft_memset(s, 0, size);
+	return (s);
 }
