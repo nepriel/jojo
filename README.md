@@ -1,3 +1,3 @@
 LIBFT
 
-fine noice good looking repo for u
+school project 2 : recode most of the stdlib c library
